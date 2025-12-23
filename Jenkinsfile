@@ -11,7 +11,7 @@ pipeline {
         NEXUS_REGISTRY = 'registry.nchldemo.com'
         IMAGE_NAME = 'findash-app-sandeep' // Add your name here
         NEXUS_CRED = 'nexus-auth'
-        CONTAINER_NAME = 'findash-app-sandeep // Add your name here
+        CONTAINER_NAME = 'findash-app-sandeep' // Add your name here
     }
 
     stages {
