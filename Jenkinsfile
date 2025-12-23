@@ -79,7 +79,7 @@ pipeline {
                         sh """
                             docker run -d \
                             --name ${CONTAINER_NAME} \
-                            -p 9091:8080 \
+                            -p 9098:8080 \
                             -e APP_VERSION="${envVersion}" \
                             -e BG_COLOR="${envColor}" \
                             ${NEXUS_REGISTRY}/${IMAGE_NAME}:${params.VERSION_TAG}
@@ -94,8 +94,8 @@ pipeline {
             steps {
                 script {
                     sh "sleep 5"
-                    sh "curl -f http://localhost:9091 || exit 1"
-                    echo "Deployment Successful! Access at http://localhost:9091"
+                    sh "curl -f http://localhost:9098 || exit 1"
+                    echo "Deployment Successful! Access at http://localhost:9098"
                 }
             }
         }
